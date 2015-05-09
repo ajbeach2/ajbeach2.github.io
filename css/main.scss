@@ -13,10 +13,11 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$sidebar-color:    black;
+
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      rgb(61, 146, 201);
+$sidebar-color:    darken($brand-color, 35%);
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
