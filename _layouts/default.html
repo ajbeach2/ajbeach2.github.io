@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
+    {% include head.html %}
+    <body>
+        <div id='layout' class="pure-g">
+            {% include header.html %}
 
-  {% include head.html %}
-
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div class="posts">
+                    {{ content }}
+                </div>
+                {% include share.html %}
+                {% include comments.html %}
+                {% include footer.html %}
+            </div>
+        </div>
+    </body>
 </html>

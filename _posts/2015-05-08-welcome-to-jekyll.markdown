@@ -3,6 +3,8 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-05-08 14:50:23
 categories: jekyll update
+description: "this is a description of this post"
+comments: true
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
