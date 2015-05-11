@@ -4,8 +4,8 @@ layout: default
 
 <div class="home">
     <div class="posts"> 
-        <h1 class="content-subhead">Pinned Post</h1>
-            {% for post in site.posts %}
+        <h1 class="content-subhead">Recent Posts</h1>
+            {% for post in paginator.posts %}
             <section class="post">
                 <header class="post-header">
                     <h2 class="post-title">
@@ -49,4 +49,45 @@ layout: default
             </section>
         {% endfor %}
     </div>
+  {% if paginator.total_pages > 1%}
+    <!-- Pagination links -->
+    <div class="pagination pure-menu pure-menu-horizontal">
+            <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+      {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% else %}
+            <span class="previous">Previous</span>
+      {% endif %}
+      </li>
+
+          
+             {% for i in (1..paginator.total_pages) %}
+                  
+                {% if i == paginator.page %}
+                 
+                 <li class="pure-menu-item pageinate-selected">
+                {% else %}
+                    <li class="pure-menu-item">
+                {% endif %}
+                {% if i == 1 %}
+                 <a class="pure-menu-link" href="{{site.url}}">{{i}} </a>
+                 {% else %}
+                    <a class="pure-menu-link" href="{{site.url}}/page{{i}}"> {{i}} </a>
+                {% endif %}
+                </li>
+              {% endfor %}
+
+      
+  <li class="pure-menu-item">
+      {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% else %}
+            <span class="next ">Next</span>
+      {% endif %}
+      </li>
+        </ul>
+
+    </div>
+     {% endif %}
 </div>

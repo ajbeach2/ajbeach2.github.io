@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2015-05-08 14:50:23
-categories: jekyll update
+categories: jekyll update test yolo grapes hair balls skins
 description: "this is a description of this post"
 comments: true
 ---

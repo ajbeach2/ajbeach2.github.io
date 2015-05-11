@@ -26,13 +26,28 @@ permalink: /contact/
 <script>
 $( "#contact-form" ).submit(function( event ) {
     var form = $(this);
+    var alert = $('#alert');
     event.preventDefault();
     $.ajax({
         type: "POST",
-        url: form.attr("action"), 
+        url: form.attr("action"),
+        dataType: 'json',
         data: form.serialize(), // serializes the form's elements.
         success: function(data) {
-            console.log(data); // show response from the php script. (use the developer toolbar console, firefox firebug or chrome inspector console)
+            alert.removeClass();
+            if(data["message"]["success"]){
+                alert.addClass('alert-success');
+                alert.html(data["message"]["success"]);
+                form.find("input[type=text], textarea").val("");
+            }else{
+                alert.addClass('alert-error');
+                alert.html(data["message"]["error"]);
+            }
+        },
+        error: function(){
+            alert.removeClass();
+            alert.addClass('alert-error');
+            alert.html('Mail could not be sent! A server is probably down somewhere...')
         }
     });
 });

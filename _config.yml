@@ -1,11 +1,13 @@
 # Site settings
-title: ajbeach2.github.io
-description: > # this means to ignore newlines until "baseurl:"
+title: abeach
+description: > #  this means to ignore newlines until "baseurl:"
   A development blog amoung other things
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://ajbeach2.github.io # the base hostname & protocol for your site
+url: http://localhost:4000
 github:  https://github.com/ajbeach2
 linkedin: https://www.linkedin.com/in/ajbeach2
 google_plus: https://plus.google.com/u/0/110964463944333047729
 markdown: kramdown
-mail_url: http://localhost:4567/email
+twitter: https://twitter.com/abeach4life
+mail_url: http://damp-lake-5729.herokuapp.com/email
+paginate: 5
