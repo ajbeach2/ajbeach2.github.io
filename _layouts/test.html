@@ -1,0 +1,162 @@
+Beautify, unpack or deobfuscate JavaScript and HTML, make JSON/JSONP readable, etc.
+All of the source code is completely free and open, available on the github under MIT licence, 
+and we have a command-line version, python library and a node package as well.
+ 
+ 
+ 
+
+HTML <style>, <script> formatting:
+   End script and style with newline? 
+ Support e4x/jsx syntax 
+ Use comma-first list style? 
+ Detect packers and obfuscators? 
+ Keep array indentation? 
+ Break lines on chained methods? 
+ Space before conditional: "if(x)" / "if (x)" 
+ Unescape printable chars encoded as \xNN or \uNNNN? 
+ Use JSLint-happy formatting tweaks? 
+ Indent <head> and <body> sections? 
+Use a simple textarea for code input?
+Beautify JavaScript or HTML (ctrl-enter)
+
+1
+<!doctype html>
+2
+<html lang="en">
+3
+ 
+4
+<head>
+5
+    <meta charset="utf-8">
+6
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+8
+ 
+9
+    <title>Blog &ndash; Layout Examples &ndash; Pure</title>
+10
+ 
+11
+ 
+12
+ 
+13
+ 
+14
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+15
+ 
+16
+ 
+17
+ 
+18
+    <!--[if lte IE 8]>
+19
+  
+20
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+21
+  
+22
+<![endif]-->
+23
+    <!--[if gt IE 8]><!-->
+24
+ 
+25
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+26
+ 
+27
+    <!--<![endif]-->
+28
+ 
+29
+ 
+30
+ 
+31
+ 
+32
+ 
+33
+    <!--[if lte IE 8]>
+34
+        <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/blog-old-ie.css">
+35
+    <![endif]-->
+36
+    <!--[if gt IE 8]><!-->
+37
+    <link rel="stylesheet" href="/combo/1.18.13?/css/layouts/blog.css">
+38
+    <!--<![endif]-->
+39
+ 
+40
+ 
+41
+ 
+42
+ 
+43
+    <!--[if lt IE 9]>
+44
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+45
+<![endif]-->
+46
+ 
+47
+ 
+Beautify JavaScript or HTML (ctrl-enter)
+Flattr
+Browser extensions and other uses:
+
+A bookmarklet (drag it to your bookmarks) by Ichiro Hiroshi to see all scripts used on the page,
+Chrome: jsbeautify-for-chrome by Tom Rix,
+Chrome: Pretty Beautiful JavaScript by Will McSweeney,
+Chrome: Quick source viewer by Tomi Mickelsson (github, blog),
+Chrome: Stackoverflow Code Beautify by Making Odd Edit Studios (github),
+Firefox: Javascript deminifier by Ben Murphy, to be used together with the firebug (github),
+Safari: Safari extension by Sandro Padin,
+Opera: Readable JavaScript (github) by Dither,
+Opera: Source extension by Deathamns,
+Sublime Text 2: JsFormat, a javascript formatting plugin for this nice editor by Davis Clark,
+vim: sourcebeautify.vim, a plugin by michalliu (requires node.js, V8, SpiderMonkey or cscript js engine),
+vim: vim-jsbeautify, a plugin by Maksim Ryzhikov (node.js or V8 required),
+Emacs: Web-beautify formatting package by Yasuyuki Oka,
+C#: ghost6991 ported the javascript formatter to C#,
+Go: ditashi has ported the javascript formatter to golang,
+Fiddler proxy: JavaScript Formatter addon,
+gEdit tips by Fabio Nagao,
+Akelpad extension by Infocatcher,
+Beautifier in Emacs write-up by Seth Mason,
+Cloud9, a lovely IDE running in a browser, working in the node/cloud, uses jsbeautifier (github),
+Shrinker, a non-free JavaScript packer for Mac. I haven't used it, so I have no idea if it's any good,
+REST Console, a request debugging tool for Chrome, beautifies JSON responses (github),
+mitmproxy, a nifty SSL-capable HTTP proxy, provides pretty javascript responses (github).
+wakanda, a neat IDE for web and mobile applications has a Beautifier extension (github).
+Burp Suite now has a beautfier extension, thanks to Soroush Dalili,
+Netbeans jsbeautify plugin by Drew Hamlett (github).
+brackets-beautify-extension for Adobe Brackets by Drew Hamlett (github),
+codecaddy.net, a collection of webdev-related tools, assembled by Darik Hall,
+editey.com, an interesting and free Google-Drive oriented editor uses this beautifier,
+a beautifier plugin for Grunt by Vishal Kadam,
+SynWrite editor has a JsFormat plugin (rar, readme),
+LIVEditor, a live-editing HTML/CSS/JS IDE (commercial, Windows-only) uses the library,
+FullScreenMario, a HTML5/javascript remake of Super Mario Bros game, uses the library in its level editor.
+Doing anything interesting? Write me to einar@jsbeautifier.org and I'll include your link.
+Written by Einar Lielmanis, einar@jsbeautifier.org, maintained and evolved by Liam Newman.
+
+We use the wonderful CodeMirror syntax highlighting editor, written by Marijn Haverbeke.
+
+Made with a great help of Jason Diamond, Patrick Hof, Nochum Sossonko, Andreas Schneider, 
+Dave Vasilevsky, Vital Batmanov, Ron Baldwin, Gabriel Harrison, Chris J. Shull, Mathias Bynens, 
+Vittorio Gambaletta, Stefano Sanfilippo and Daniel Stockman.
+
+Run the tests
