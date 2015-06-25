@@ -17,13 +17,14 @@ permalink: /contact/
             <div class="g-recaptcha" data-sitekey="6LeDnQYTAAAAAF9zoYIxeWhyNYWJx8G60aVJhmMz"></div>
         </div>
         <div class="pure-controls">
-            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            <button  type="submit" class="ladda-button pure-button pure-button-primary" data-style="expand-right"><span class="ladda-label">Submit</span></button>
         </div>
     </fieldset>
 </form>
 
 
 <script>
+$( 'button[type=submit]' ).ladda( 'bind' );
 $( "#contact-form" ).submit(function( event ) {
     var form = $(this);
     var alert = $('#alert');
@@ -33,6 +34,10 @@ $( "#contact-form" ).submit(function( event ) {
         url: form.attr("action"),
         dataType: 'json',
         data: form.serialize(), // serializes the form's elements.
+        complete: function(){
+           $.ladda( 'stopAll' );
+           grecaptcha.reset();
+        },
         success: function(data) {
             alert.removeClass();
             if(data["message"]["success"]){
